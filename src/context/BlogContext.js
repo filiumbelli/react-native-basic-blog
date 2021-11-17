@@ -11,8 +11,8 @@ export const BlogProvider = ({ children }) => {
 
     const [posts, setPosts] = React.useState(blogPost);
 
-    const addBlogPost = (post) => {
-        setPosts([...posts, post])
+    const addBlogPost = (title) => {
+        setPosts([...posts, {title: title}])
     }
 
     return <BlogContext.Provider value={{ data: posts, addBlogPost }}>
